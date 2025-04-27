@@ -378,7 +378,7 @@ header .nav-links li:last-child {
     color: var(--principal);
   }
   .contenedor {
-    width: 320px;
+    width: 310px;
   }
   .galeria-pelis {
     grid-template-columns: repeat(1, 1fr);
