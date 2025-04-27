@@ -357,12 +357,12 @@ header .nav-links li:last-child {
 
 /*     RESPONSIVE     */
 
-@media (min-width: 300px) {
+@media (min-width: 350px) {
   .contenedor {
-    width: 250px;
+    width: 320px;
   }
   .galeria-pelis {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
