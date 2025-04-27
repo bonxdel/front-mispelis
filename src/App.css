@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/* Se utiliza para generar variables globales en CSS, en este caso, de colores */
+:root {
+  --principal: #14181C;
+  --secundario: #FFB140;
+}
+
+/* Valores del body: padding, margen, tipografía y color de fondo */
+body {
+  font-family: "Outfit", sans-serif;
+  padding: 0;
+  margin: 0;
+  background: #1D242A;
+}
+
+/* Valores del div "contenedor" */
+.contenedor {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* Valores de la clase "btn" aplicada a botones */
+.btn {
+  padding: 10px 15px;
+  background-color: var(--secundario);
+  color: var(--principal);
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  border: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  line-height: 1.1;
+}
+
+/* Valores de hover en los botones con la clase "btn" */
+.btn:hover {
+  background-color: var(--secundario);
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* Valores de "btn" cuando está desactivado */
+.btn:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* Color de fondo del header */
+header {
+  background-color: var(--principal);
+}
+
+/* Características del contenido incluido en el header */
+header .contenido-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+/* Valores de lo enlaces del header */
+header a {
+  color: white;
+  font-size: 1.25rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Hover en los enlaces del header */
+header a:hover {
+  opacity: 0.7;
+}
+
+/* Información sobre el nombre de la app en el header */
+header .nombre-app a {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+/* Navegación en el header */
+header .nav-links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+/* Display y márgenes de los elementos de la navegación en el header */
+header .nav-links li {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+/* Último elemento de la navegación del header */
+header .nav-links li:last-child {
+  margin-right: 0;
+}
+
+/* Contenedor principal de la página de registro */
+.pagina-registro{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Contenedor dentro de la página de registro que incluye los elementos para loggearse */
+.pagina-registro .contenedor{
+  max-width: 300px;
+  width: 100%;
+}
+
+/* Heading (título) de la página registro */
+.pagina-registro .heading {
+  color: white;
+  margin: 0;
+}
+
+/* Botones de la página de registro*/
+.pagina-registro .btn{
+  margin-bottom: 15px;
+}
+
+/* Contenedor principal de la página de login */
+.pagina-login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Contenedor dentro de la página de login que incluye los elementos para loggearse */
+.pagina-login .contenedor{
+  max-width: 300px;
+  width: 100%;
+}
+
+/* Heading (título) de la página Login */
+.pagina-login .heading {
+  color: white;
+  margin: 0;
+}
+
+/* Texto de la página de login*/
+.pagina-login p{
+  color: white;
+}
+
+/* Botones de la página de login*/
+.pagina-login .btn{
+  margin-bottom: 15px;
+}
+
+/* Inputs del login y de registro */
+.campo {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+/* Texto de cada input (usuario y contraseña) */
+.campo label{
+  display: flex;
+  margin-bottom: 10px;
+}
+
+/* Contenedor del buscador */
+.buscar-pelis {
+  padding: 50px 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Input del buscador */
+.buscar-pelis .buscador input {
+  width: 100%;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: var(--principal);
+  font-size: 1.25rem;
+}
+
+/* Resultados mostrados en el buscador */
+.resultados {
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
+}
+
+/* Resultados mostrados en lista */
+.resultados li {
+  list-style: none;
+}
+
+/* Cartel de peli mostrado como resultado del buscador */
+.cartel-buscador {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+/* Info sobre la imagen mostrada como resultado (o la "no imagen" en caso de no haberla) */
+.cartel-buscador .contenedor-cartel img,
+.cartel-inexistente {
+  width: 75px;
+  height: 113px;
+  background-color: #dbdada;
+  border-radius: 5px;
+  margin-right: 15px;
+  display: block;
+  color: transparent;
+}
+
+/* Contenedor de la info de las pelis resultado del buscador */
+.cartel-buscador .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Título de la peli mostrada como resultado del buscador */
+.cartel-buscador .info .titulo-peli {
+  font-size: 1.25rem;
+  color: white;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Fecha de estreno de la peli mostrada como resultado del buscador */
+.cartel-buscador .info .fecha-estreno {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: white;
+  margin: 0;
+}
+
+/* Márgenes entre los botones usados en los resultados del buscador */
+.cartel-buscador .controles-buscador button {
+  margin-right: 10px;
+}
+
+/* Contenedor de las páginas donde se muestran las pelis (Favoritas y Vistas) */
+.pagina-pelis {
+  padding: 30px 0;
+}
+
+/* Header en las páginas Favoritas y Vistas que incluye heading y contador */
+.pagina-pelis .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+/* Heading (título) de las páginas Favoritas y Vistas */
+.pagina-pelis .heading {
+  color: white;
+  margin: 0;
+}
+
+/* Contador de películas en ambas categorías */
+.contador {
+  display: block;
+  background-color: var(--secundario);
+  padding: 5px 15px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 999px;
+  color: var(--principal);
+}
+
+/* Galería que muestra los carteles de cada peli en cada categoría*/
+.galeria-pelis {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+/* Div del cartel de las pelis */
+.cartel {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  border: 0;
+  display: block;
+}
+
+/* Info sobre la imagen dentro del div del cartel */
+.cartel img {
+  width: 100%;
+  min-height: 300px;
+  display: block;
+}
+
+/* Contenedor de los botones de acción sobre los carteles de las pelis */
+.cartel .controles-pelis {
+  display: inline;
+  background-color: red;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  padding: 3px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+/* Hover sobre los botones de acción */
+.cartel:hover .controles-pelis {
+  opacity: 1;
+}
+
+/* Info sobre los botones de acción */
+.ctrl-btn {
+  color: white;
+  background-color: transparent;
+  border: none;
+  transition: all 0.3s ease;
+  font-size: 1.25rem;
+  padding: 5px;
+  margin: 0;
+}
+
+/* Hover de los botones de acción (cambio de color de los iconos) */
+.ctrl-btn:hover {
+  color: var(--secundario);
+  cursor: pointer;
+}
+
+/* Texto cuando no hay pelis registradas en las páginas "favoritas" y "vistas" */
+.pagina-pelis .no-pelis {
+  color: #445566;
+  font-size: 3rem;
+  text-align: center;
+}
+
+
+
+
+
+
+/*     RESPONSIVE     */
+
+@media (min-width: 500px) {
+  .contenedor {
+    width: 450px;
+  }
+  .galeria-pelis {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 770px) {
+  .contenedor {
+    width: 750px;
+  }
+  .galeria-pelis {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 990px) {
+  .contenedor {
+    width: 970px;
+  }
+  .galeria-pelis {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .contenedor {
+    width: 1180px;
+  }
+  .galeria-pelis {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
