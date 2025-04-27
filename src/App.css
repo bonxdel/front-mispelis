@@ -381,8 +381,7 @@ header .nav-links li:last-child {
     width: 320px;
   }
   .galeria-pelis {
-    grid-template-columns: repeat(2, 1fr);
-    object-fit: cover;
+    grid-template-columns: repeat(1, 1fr);
   }
 
 }
